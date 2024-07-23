@@ -118,3 +118,31 @@ From table 6, the performance of Ridge and Lasso regression is abit similar with
 
 ![Table6](table6.png "Table6")
 
+## Principle Component Regression
+
+The error decreases as more components are added, reaching its lowest at 7 components (CV RMSEP = 0.4813, adjCV RMSEP = 0.4794), suggesting that adding up to 7 components minimizes the prediction error in this cross-validation setup.
+Beyond 7 components, the RMSEP starts to increase indicating that adding more components does not significantly improve the predictive capability of the model and may instead lead to overfitting.
+The percentage of variance explained in the predictors increases with each component added, reaching 84.22% with the 7 components. This is expected as more components capture more information (or variance) present in the X variables.
+The variance explained in the TN response variable increases gradually with the number of components used. Starting from 36.65% with 1 component, it increases to 62.54% with 7 components. The most significant increase in explained variance in TN is observed initially, with diminishing returns as more components are added beyond the 7th component.
+The optimal number of components to use for prediction, based on minimizing the cross- validated RMSEP and considering the explained variance, appears to be around 7 components.
+
+![Table7](table7.png "Table7")
+
+From figure 11 it was noticed that with fewer components the coefficient exhibits larger variance which shows that each additional component alters the model. Also, at some certain level it was noticed that as more components were added the changes in the coefficient diminishes and the line begins to converge. Including more component beyond 7 does not substantially change the coefficients.
+
+![Figure11](figure11.png "Figure11")
+
+This is a plot used to determine the optimal number of component and from the plot it indicates that the optimal number of components is 7 which indicates that seven components are sufficient to achieve an acceptable balance between model complexity and prediction accuracy.
+
+![Figure12](figure12.png "Figure12")
+
+This PCR model indicates a complex relationship between the dependent variable and various environmental and land-use factors. Positive coefficients (e.g., for certain square root- transformed land uses like urban areas, row crops, pastures, and wetlands) suggest that these factors contribute to an increase in the dependent variable. In contrast, negative coefficients (e.g., for forest areas, baseflow, NO3 deposition, runoff, and certain log-transformed variables like lake area and max depth) indicate factors that contribute to a decrease in the dependent variable.
+
+![Table8](table8.png "Table8")
+
+From the PCR metrics in Table 9, 62.5% of the variability in the log (TN) response variable can be explained by the principal component regression model above. The R square difference between the predicted variable and actual variable is 0.217. On average the model prediction are 0.355 units away from the actual value while the standard deviation of the prediction error is 0.465
+
+![Table9](table9.png "Table9")
+
+ 
+
