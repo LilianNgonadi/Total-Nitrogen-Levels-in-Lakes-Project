@@ -77,3 +77,13 @@ From figure 5, the plot indicate14 predictors but none of the coefficient is com
 From figure 6 above, as the value of log(λ) increases, the MSE increases for a while before it starts to rise. The region where we have stability shows that this is where we have the optimal λ value where the model achieves the minimum of MSE. The plot depicts the mean squared prediction error MSE lambda against log lambda. The gray bar at each point show MSE lambda plus and minus one standard error. The first dashed lines shows the location of the minimum of MSE. The second dashed lines shows the largest lambda value such that the error is within 1 standard error. . The best lambda is given as 0.5346
 ![Figure6](figure6.png "Figure6")
 
+## Extracting the best model using K-cross validation
+The negative mean prediction of -34.38 suggests that, on average, the model predicts a decrease or negative outcome for the response variable under average conditions of the predictors Negative coefficients for NO3Depo, Runoff, and log(MaxDepth) suggest that increases in these predictors are associated with decreases in the response variable, indicating potentially adverse effects. Positive coefficients for TotalDepo, sqrt(Urban), sqrt(Rowcrop), sqrt(Pasture), sqrt(Wetland), log(LakeArea), and both connectivity variables indicate that these factors are associated with increases in the response variable, suggesting beneficial or enhancing effects. Small magnitude coefficients, such as for Baseflow and Forest, imply a minimal impact on the response variable
+
+![Table2](table2.png "Table2")
+
+From the Ridge metrics in Table 3, 65.60% of the variability in the log (TN) response variable can be explained by the Lasso regression model above. The R square difference between the predicted variable and actual variable is 0.2205. On average the model prediction are 0.3671 units away from the actual value while the standard deviation of the prediction error is 0.4696
+
+![Table3](table3.png "Table3")
+
+
