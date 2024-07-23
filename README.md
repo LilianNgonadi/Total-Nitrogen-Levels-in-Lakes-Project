@@ -106,3 +106,15 @@ simplifying the model at the expense of potentially increasing the MSE. The lamb
 
 ![Figure10](figure10.png "Figure10")
 
+In summary, the Lasso algorithm has identified NO3Depo, Runoff, Rowcrop, Forest, Wetland, MaxDepth, and LWR as significant predictors, with varying degrees of positive and negative associations with the response variable. 
+
+![Table4](table4.png "Table4")
+
+From the Lasso metrics in Table 5, 64.7% of the variability in the log (TN) response variable can be explained by the Lasso regression model above. The R square difference between the predicted variable and actual variable is 0.2210. On average the model prediction are 0.3648 units away from the actual value while the standard deviation of the prediction error is 0.4701
+
+![Table5](table5.png "Table5")
+
+From table 6, the performance of Ridge and Lasso regression is abit similar with Ridge having a negligibly higher R-squared and slightly lower MSE and RMSE, and Lasso having a marginally lower MAE.
+
+![Table6](table6.png "Table6")
+
