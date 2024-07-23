@@ -87,3 +87,22 @@ From the Ridge metrics in Table 3, 65.60% of the variability in the log (TN) res
 ![Table3](table3.png "Table3")
 
 
+## Lasso Regression
+
+In figure 7, the lasso regression plot suggests that while some predictors maintain their importance at different levels of regularization, others are more sensitive and become less influential in the model
+
+![Figure7](figure7.png "Figure7")
+
+The plot reveals that the predictor "NO3depo" has the most significant positive coefficient, which decreases rapidly as lambda increases, suggesting it is sensitive to the regularization. "Baseflow" and "Runoff" have large negative coefficients that reduce with lambda, but more gradually. Predictors like "Urban," "Rowcrop," "Pasture," "Forest," "Lakearea," "MaxDepth," "ConnectivityDR_Stream," and "LWR" tend to have smaller and more stable coefficients. The number of non-zero coefficients decreases with increasing lambda, indicating a simpler model with fewer predictors. Overall, the plot suggests that some environmental factors have a more robust influence on the response variable than others in this Lasso regression model.
+
+![Figure8](figure8.png "Figure8")
+
+From figure 9, plot predictor-standardized coefficients vs. L1 norm of vector scaled to OLS fit. Some predictors, such as "Runoff," "Urban," and "Pasture," have relatively stable paths, suggesting that they are consistently important across different lambda values. "NO3depo" starts with a high positive coefficient that decreases quickly, indicating initial importance that diminishes with stronger regularization. "Baseflow" has a negative coefficient that also decreases in magnitude with regularization. Predictors like "Lakearea" and "Wetland" have coefficients that approach zero more quickly, suggesting they may be less important in the presence of regularization.
+
+![Figure9](figure9.png "Figure9")
+
+As lambda increases, the MSE initially decreases, reaching a minimum before starting to increase again. This pattern suggests that there is an optimal value of lambda that minimizes the MSE, thus providing the best balance between bias and variance in the model. The numbers at the top indicate the number of non-zero coefficients in the model at each lambda value. With higher lambda, the model becomes more regularized, resulting in fewer non-zero coefficients,
+simplifying the model at the expense of potentially increasing the MSE. The lambda value that minimizes the test MSE turns out to be 0.094. The best lambda is given as 0.094
+
+![Figure10](figure10.png "Figure10")
+
