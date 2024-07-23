@@ -127,6 +127,7 @@ The variance explained in the TN response variable increases gradually with the 
 The optimal number of components to use for prediction, based on minimizing the cross- validated RMSEP and considering the explained variance, appears to be around 7 components.
 
 ![Table7](table7.png "Table7")
+![Table7(1)](table7(1).png "Table7(1)")
 
 From figure 11 it was noticed that with fewer components the coefficient exhibits larger variance which shows that each additional component alters the model. Also, at some certain level it was noticed that as more components were added the changes in the coefficient diminishes and the line begins to converge. Including more component beyond 7 does not substantially change the coefficients.
 
@@ -144,5 +145,31 @@ From the PCR metrics in Table 9, 62.5% of the variability in the log (TN) respon
 
 ![Table9](table9.png "Table9")
 
- 
+## Partial Least Square Regression
+
+From table 10, the RMSEP values continue to decrease slightly as more components are added, the rate of decrease in RMSEP slows down significantly after 2 components. This suggests that the first two components capture the most significant patterns in the data, and additional components only offer marginal improvements in predictive accuracy.
+The optimal number of components to use for prediction, based on minimizing the cross- validated RMSEP and considering the explained variance, appears to be around 2 components.
+
+![Table10](table10.png "Table10")
+![Table10(1)](table10(1).png "Table10(1)")
+
+The plot in figure 13 shows how each predictor influences the response variable for different numbers of components in the model. The coefficients that are close to zero suggest a weak influence on the response variable. The variability among the lines for different numbers of components indicates how stable the coefficient estimates are as complexity is added to the model.
+
+![Figure13](figure13.png "Figure13")
+
+This is a plot used to determine the optimal number of component and from the plot it indicates that the optimal number of components is 2 which indicates that two components are sufficient to achieve an acceptable balance between model complexity and prediction accuracy.
+
+![Figure14](figure14.png "Figure14")
+
+From the Pls metrics in Table 11, 68.8% of the variability in the log (TN) response variable can be explained by the Partial least square model above. The R square difference between the predicted variable and actual variable is 0.180. On average the model prediction are 0.329 units away from the actual value while the standard deviation of the prediction error is 0.425
+
+![Table11](table11.png "Table11")
+
+ The PLS model identifies both positive and negative relationships between various environmental and land-use factors and the logarithm of Total Nitrogen concentration. The model suggests that: (row crops, pastures) significantly increase Total Nitrogen concentrations. Urban areas also contribute positively, to a lesser extent. In contrast, natural land covers like forests and larger or deeper water bodies are associated with lower Total Nitrogen concentrations.
+Atmospheric depositions have mixed effects, with nitrogen oxide depositions reducing Total Nitrogen concentrations, while total depositions increase it.
+
+![Table12](table12.png "Table12")
+PLS is the overall best model followed by that of Ridge regression.
+
+![Table13](table13.png "Table13")
 
