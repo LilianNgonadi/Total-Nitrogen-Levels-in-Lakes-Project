@@ -13,8 +13,13 @@
      <li><a href="#analysis">Analysis</a></li>
     <ul>
       <li><a href="#ridge-regression">Ridge Regression</a></li>
-      <li><a href="#visualize-categorical-feature-distribution">Visualize Categorical Feature Distribution</a></li>
-      <li><a href="map-visualization-of-health-facilities">Map Visualization of Health Facilities</a></li>     
+      <ul>
+        <li><a href="#scaling-of-predictors">Scaling of Predictors</a></li>
+  <li><a href="#extracting-the-best-model">Extracting the best model<a></li>
+      </ul>
+      <li><a href="#lasso-regression">Lasso Regression</a></li>
+      <li><a href="#principle-component-regression">Principle Component Regression</a></li>
+      <li><a href="#partial-least-square-regression">Partial Least Square Regression</a></li>
     </ul>
   </li>
   </li>
@@ -77,7 +82,7 @@ From figure 5, the plot indicate14 predictors but none of the coefficient is com
 From figure 6 above, as the value of log(λ) increases, the MSE increases for a while before it starts to rise. The region where we have stability shows that this is where we have the optimal λ value where the model achieves the minimum of MSE. The plot depicts the mean squared prediction error MSE lambda against log lambda. The gray bar at each point show MSE lambda plus and minus one standard error. The first dashed lines shows the location of the minimum of MSE. The second dashed lines shows the largest lambda value such that the error is within 1 standard error. . The best lambda is given as 0.5346
 ![Figure6](figure6.png "Figure6")
 
-## Extracting the best model using K-cross validation
+## Extracting the best model 
 The negative mean prediction of -34.38 suggests that, on average, the model predicts a decrease or negative outcome for the response variable under average conditions of the predictors Negative coefficients for NO3Depo, Runoff, and log(MaxDepth) suggest that increases in these predictors are associated with decreases in the response variable, indicating potentially adverse effects. Positive coefficients for TotalDepo, sqrt(Urban), sqrt(Rowcrop), sqrt(Pasture), sqrt(Wetland), log(LakeArea), and both connectivity variables indicate that these factors are associated with increases in the response variable, suggesting beneficial or enhancing effects. Small magnitude coefficients, such as for Baseflow and Forest, imply a minimal impact on the response variable
 
 ![Table2](table2.png "Table2")
@@ -169,6 +174,7 @@ From the Pls metrics in Table 11, 68.8% of the variability in the log (TN) respo
 Atmospheric depositions have mixed effects, with nitrogen oxide depositions reducing Total Nitrogen concentrations, while total depositions increase it.
 
 ![Table12](table12.png "Table12")
+
 PLS is the overall best model followed by that of Ridge regression.
 
 ![Table13](table13.png "Table13")
