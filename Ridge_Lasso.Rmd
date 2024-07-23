@@ -1,7 +1,7 @@
 ---
 author: "Lilian Ngonadi"
 date: "2024-02-03"
-output:
+rmarkdown::github_document
   pdf_document: default
   word_document: default
 ---
