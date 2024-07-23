@@ -15,6 +15,7 @@
       <li><a href="#ridge-regression">Ridge Regression</a></li>
       <ul>
         <li><a href="#scaling-of-predictors">Scaling of Predictors</a></li>
+        <li><a href="#choosing-optimal-lambda-value">Choosing Optimal Lambda Value</a></li>
   <li><a href="#extracting-the-best-model">Extracting the best model<a></li>
       </ul>
       <li><a href="#lasso-regression">Lasso Regression</a></li>
