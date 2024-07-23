@@ -62,3 +62,18 @@ From figure 3, Max depth might be contributing less to the model as more varianc
 From table 1, the various predictors and TN has various range of scale standard deviation indicating a diverse impact these predictors may have in the study.
 
 ![Table1](table1.png "Table1")
+
+From figure 4, the differences in the coefficients' absolute values decrease, indicating a more
+uniform shrinkage effect across all predictors. Some predictors have larger absolute values of coefficients at lower lambda, indicating they have a significant impact on the outcome when there's less regularization. The coefficient of the predictors decrease in absolute value as lambda increases, but none are reduced to zero, which is typical in ridge regression.
+
+![Figure4](figure4.png "Figure4")
+
+From figure 5, the plot indicate14 predictors but none of the coefficient is completely reduced to zero. Also, the coefficient shows that as the betaL2 scaled regularization increases the coefficient changes
+
+![Figure5](figure5.png "Figure5")
+
+## Choosing Optimal Lambda Value
+
+From figure 6 above, as the value of log(λ) increases, the MSE increases for a while before it starts to rise. The region where we have stability shows that this is where we have the optimal λ value where the model achieves the minimum of MSE. The plot depicts the mean squared prediction error MSE lambda against log lambda. The gray bar at each point show MSE lambda plus and minus one standard error. The first dashed lines shows the location of the minimum of MSE. The second dashed lines shows the largest lambda value such that the error is within 1 standard error. . The best lambda is given as 0.5346
+![Figure6](figure6.png "Figure6")
+
